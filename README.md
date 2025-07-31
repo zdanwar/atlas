@@ -63,11 +63,11 @@ Update your Claude Desktop configuration:
     },
     "odoo": {
       "command": "node",
-      "args": ["/path/to/atlas/odoo-mcp-server.js"]
+      "args": ["/path/to/atlas/servers/odoo-mcp-server.js"]
     },
     "ocr": {
       "command": "node",
-      "args": ["/path/to/atlas/ocr-mcp-server.js"],
+      "args": ["/path/to/atlas/servers/ocr-mcp-server.js"],
       "cwd": "/path/to/atlas"
     },
     "excel": {
@@ -238,6 +238,54 @@ python -m pytest tests/
 npm run format
 black ai/ servers/
 ```
+
+## 🔧 Troubleshooting
+
+### MCP Servers Not Appearing in Claude Desktop
+
+If you only see `filesystem` and `excel` servers but not `odoo` and `ocr`:
+
+1. **Check file paths** in your Claude Desktop config:
+   ```bash
+   # Locate your config file
+   find ~/Library -name "claude_desktop_config.json" 2>/dev/null
+   ```
+
+2. **Verify correct server paths** (note the `/servers/` subdirectory):
+   ```json
+   "odoo": {
+     "command": "node", 
+     "args": ["/path/to/atlas/servers/odoo-mcp-server.js"]  // ← servers/ is important!
+   },
+   "ocr": {
+     "command": "node",
+     "args": ["/path/to/atlas/servers/ocr-mcp-server.js"],  // ← servers/ is important!
+     "cwd": "/path/to/atlas"
+   }
+   ```
+
+3. **Test servers individually**:
+   ```bash
+   # Test OCR server
+   cd /path/to/atlas && node servers/ocr-mcp-server.js
+   
+   # Test Odoo server  
+   node servers/odoo-mcp-server.js
+   ```
+
+4. **Restart Claude Desktop** completely after configuration changes
+
+### GPU Acceleration Not Working
+
+- Ensure you have compatible hardware (AMD Radeon Pro, NVIDIA, or Apple Silicon)
+- Check Python environment: `pip list | grep torch`
+- Verify Metal/CUDA support: System will automatically fallback to CPU if needed
+
+### Common Path Issues
+
+- Always use **absolute paths** in MCP configuration
+- Remember the `/servers/` subdirectory for ATLAS MCP servers
+- Ensure `cwd` parameter points to project root directory
 
 ## 📞 Support
 
