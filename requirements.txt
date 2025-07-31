@@ -1,0 +1,50 @@
+# CLIRO - Python Dependencies
+# Core OCR and Image Processing
+easyocr==1.7.0
+opencv-python==4.8.1.78
+Pillow==11.3.0
+pillow-heif==0.22.3
+numpy==1.25.2
+
+# PDF Processing
+PyPDF2==3.0.1
+pdf2image==1.17.0
+pdfplumber==0.11.7
+PyMuPDF==1.26.3
+
+# Image Enhancement
+scikit-image==0.22.0
+opencv-contrib-python==4.8.1.78
+
+# Machine Learning (for future AI features)
+torch==2.0.1
+torchvision==0.15.2
+transformers==4.30.2
+
+# Data Processing
+pandas==2.1.1
+openpyxl==3.1.2
+
+# Utilities
+requests==2.31.0
+python-dotenv==1.0.0
+click==8.1.7
+tqdm==4.66.1
+
+# Development and Testing
+pytest==7.4.2
+pytest-asyncio==0.21.1
+black==23.7.0
+flake8==6.0.0
+mypy==1.5.1
+
+# Performance and Monitoring
+psutil==5.9.5
+memory-profiler==0.61.0
+
+# Security
+cryptography==45.0.5
+
+# Async support
+asyncio==3.4.3
+aiofiles==23.2.1

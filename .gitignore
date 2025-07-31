@@ -1,0 +1,109 @@
+# Dependencies
+node_modules/
+ocr-env/
+__pycache__/
+
+# Environment files
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Cache directories
+ocr_cache/
+pdf_cache/
+*.pkl
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+/tmp/
+*.tmp
+*.temp
+
+# Test files
+/test/fixtures/
+/test/output/
+
+# Configuration files with sensitive data
+config/production.json
+config/secrets.json
+
+# Backup files
+*.backup
+*.bak
+odoo-mcp-server-backup.js
+
+# Build outputs
+dist/
+build/
+
+# Python specific
+*.pyc
+*.pyo
+*.pyd
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Virtual environments
+venv/
+ENV/
+env/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# macOS
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# Large files that shouldn't be committed
+*.heic
+*.heif
+*.pdf
+*.jpg
+*.jpeg
+*.png
+*.xlsx
+*.xls
+
+# Personal documents and test data
+purchase/
+documents/
+test-data/
