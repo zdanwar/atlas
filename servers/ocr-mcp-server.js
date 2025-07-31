@@ -10,17 +10,19 @@ const { spawn } = require('child_process');
 const path = require('path');
 const fs = require('fs');
 
-// Path to the Python OCR environment and script
-const PYTHON_ENV = path.join(__dirname, 'ocr-env', 'bin', 'python');
+// Path to the Python OCR environment and script  
+const PYTHON_ENV = '/usr/local/bin/python3'; // Use system Python with installed packages
 const OCR_SCRIPT = path.join(__dirname, 'ocr_cli.py');
 const PURCHASE_FOLDER = '/Users/macbookpro/Documents/Odoo MCP/purchase';
 
 // Helper function to run Python OCR script
-function runOCRScript(filePath, operation = 'single', limit = 10) {
+function runOCRScript(filePath, operation = 'image', documentType = 'purchase_order') {
     return new Promise((resolve, reject) => {
         const args = operation === 'batch' ? 
-            [OCR_SCRIPT, '--batch', filePath, '--limit', limit.toString()] : 
-            [OCR_SCRIPT, '--single', filePath];
+            [OCR_SCRIPT, 'batch', filePath, '--document-type', documentType] : 
+            operation === 'pdf' ?
+            [OCR_SCRIPT, 'pdf', filePath, '--document-type', documentType] :
+            [OCR_SCRIPT, 'image', filePath, '--document-type', documentType];
             
         const pythonProcess = spawn(PYTHON_ENV, args, {
             cwd: __dirname,

@@ -275,6 +275,31 @@ If you only see `filesystem` and `excel` servers but not `odoo` and `ocr`:
 
 4. **Restart Claude Desktop** completely after configuration changes
 
+### OCR Processing Errors
+
+If OCR functions are failing with spawn errors:
+
+1. **Install Tesseract OCR engine**:
+   ```bash
+   brew install tesseract
+   ```
+
+2. **Install Python OCR dependencies**:
+   ```bash
+   pip3 install --break-system-packages pytesseract Pillow opencv-python pdf2image numpy
+   ```
+
+3. **Verify OCR CLI script exists**:
+   ```bash
+   ls -la /path/to/atlas/servers/ocr_cli.py
+   chmod +x /path/to/atlas/servers/ocr_cli.py
+   ```
+
+4. **Test OCR processing**:
+   ```bash
+   python3 /path/to/atlas/servers/ocr_cli.py batch "/path/to/images" --document-type purchase_order
+   ```
+
 ### GPU Acceleration Not Working
 
 - Ensure you have compatible hardware (AMD Radeon Pro, NVIDIA, or Apple Silicon)
