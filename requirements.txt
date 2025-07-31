@@ -1,4 +1,4 @@
-# CLIRO - Python Dependencies
+# ATLAS - Python Dependencies
 # Core OCR and Image Processing
 easyocr==1.7.0
 opencv-python==4.8.1.78

@@ -1,15 +1,15 @@
-# 🤖 CLIRO - AI-Powered Document Processing & Odoo Integration Platform
+# 🗺️ ATLAS - Automated Text Learning & Analysis System
 
-**CLIRO** (Claude Intelligent Recognition & Odoo integration) is an advanced MCP-based platform that transforms unstructured business documents into structured Odoo-ready data using AI-powered OCR and intelligent automation.
+**ATLAS** (Automated Text Learning & Analysis System) is an advanced MCP-based platform that transforms unstructured business documents into structured Odoo-ready data using AI-powered OCR and intelligent automation.
 
-![CLIRO Platform](https://img.shields.io/badge/Platform-MCP%20Ecosystem-blue)
+![ATLAS Platform](https://img.shields.io/badge/Platform-MCP%20Ecosystem-blue)
 ![Status](https://img.shields.io/badge/Status-Production%20Ready-green)
 ![GPU](https://img.shields.io/badge/GPU-Accelerated-orange)
 ![OCR](https://img.shields.io/badge/OCR-95%25%20Accuracy-brightgreen)
 
 ## 🌟 Overview
 
-CLIRO eliminates manual data entry by automatically processing invoices, purchase orders, receipts, and other business documents. It extracts structured data with 95%+ accuracy and creates Odoo-ready import files, saving businesses 80% of their document processing time.
+ATLAS eliminates manual data entry by automatically processing invoices, purchase orders, receipts, and other business documents. It extracts structured data with 95%+ accuracy and creates Odoo-ready import files, saving businesses 80% of their document processing time.
 
 ### Key Features
 
@@ -34,8 +34,8 @@ CLIRO eliminates manual data entry by automatically processing invoices, purchas
 
 ```bash
 # Clone the repository
-git clone git@github.com:voundbrand/cliro.git
-cd cliro
+git clone git@github.com:voundbrand/atlas.git
+cd atlas
 
 # Install Node.js dependencies
 npm install
@@ -63,12 +63,12 @@ Update your Claude Desktop configuration:
     },
     "odoo": {
       "command": "node",
-      "args": ["/path/to/cliro/odoo-mcp-server.js"]
+      "args": ["/path/to/atlas/odoo-mcp-server.js"]
     },
     "ocr": {
       "command": "node",
-      "args": ["/path/to/cliro/ocr-mcp-server.js"],
-      "cwd": "/path/to/cliro"
+      "args": ["/path/to/atlas/ocr-mcp-server.js"],
+      "cwd": "/path/to/atlas"
     },
     "excel": {
       "command": "npx",
@@ -97,7 +97,7 @@ Find vendor "Acme Corp" and create purchase order from extracted data
 
 ## 🏗️ Architecture
 
-CLIRO uses a microservices architecture with 4 integrated MCP servers:
+ATLAS uses a microservices architecture with 4 integrated MCP servers:
 
 ```
 ┌─────────────┐    ┌─────────────┐    ┌─────────────┐    ┌─────────────┐
@@ -194,7 +194,7 @@ CLIRO uses a microservices architecture with 4 integrated MCP servers:
 ## 📁 Project Structure
 
 ```
-cliro/
+atlas/
 ├── docs/                          # Complete documentation
 │   ├── README_MASTER.md          # Documentation hub
 │   ├── TECHNICAL_ARCHITECTURE.md # Technical specifications
@@ -259,8 +259,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**Transform your document processing with AI. Start with CLIRO today!** 🚀
+**Transform your document processing with AI. Start with ATLAS today!** 🚀
 
-![CLIRO Workflow](https://via.placeholder.com/800x400?text=CLIRO+Document+Processing+Workflow)
+![ATLAS Workflow](https://via.placeholder.com/800x400?text=ATLAS+Document+Processing+Workflow)
 
 *Made with ❤️ for businesses that value efficiency and accuracy*

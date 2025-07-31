@@ -1,7 +1,7 @@
 {
-  "name": "cliro",
+  "name": "atlas",
   "version": "2.0.0",
-  "description": "AI-Powered Document Processing & Odoo Integration Platform",
+  "description": "Automated Text Learning & Analysis System - AI-Powered Document Processing & Odoo Integration Platform",
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
@@ -30,19 +30,19 @@
     "business-automation"
   ],
   "author": {
-    "name": "CLIRO Team",
-    "email": "team@cliro.ai",
-    "url": "https://github.com/voundbrand/cliro"
+    "name": "ATLAS Team",
+    "email": "danish@milestonealuminium.com",
+    "url": "https://github.com/voundbrand/atlas"
   },
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git@github.com:voundbrand/cliro.git"
+    "url": "git@github.com:voundbrand/atlas.git"
   },
   "bugs": {
-    "url": "https://github.com/voundbrand/cliro/issues"
+    "url": "https://github.com/voundbrand/atlas/issues"
   },
-  "homepage": "https://github.com/voundbrand/cliro#readme",
+  "homepage": "https://github.com/voundbrand/atlas#readme",
   "engines": {
     "node": ">=18.0.0",
     "npm": ">=9.0.0"
